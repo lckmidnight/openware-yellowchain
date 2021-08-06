@@ -1,3 +1,18 @@
+# Launch
+
+Download polkadot binary here https://github.com/paritytech/polkadot/releases/download/v0.9.8/polkadot
+and place it in ```./relaychain/bin```
+
+Note: This is temporary, will later be replaced by a polkadot fork
+
+Start the relaychain and the parachain:
+```npx polkadot-launch ./polkadot-launch.json```
+
+Monitor relaychain: https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer
+
+Monitor parachain: https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9977#/explorer
+
+
 # Ecosystem
 
 ## Polkadot
@@ -181,4 +196,3 @@ https://substrate.dev/docs/en/knowledgebase/learn-substrate/off-chain-features
 - [ ] Explore the idea of storing/running TradePoint strategies directly on Yellow Chain (using off-chain features)
 - [ ] Explore Vault equivalent for storing secrets inside the chain
 - [ ] Get a promotion
-

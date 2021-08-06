@@ -1,0 +1,48 @@
+{
+    "relaychain": {
+        "bin": "./relaychain/bin/polkadot",
+        "chain": "rococo-local",
+        "nodes": [
+            {
+                "name": "alice",
+                "wsPort": 9944,
+                "port": 30444
+            },
+            {
+                "name": "bob",
+                "wsPort": 9955,
+                "port": 30555
+            }
+        ],
+        "genesis": {
+            "runtime": {
+                "runtime_genesis_config": {
+                    "parachainsConfiguration": {
+                        "config": {
+                            "validation_upgrade_frequency": 1,
+                            "validation_upgrade_delay": 1
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "parachains": [
+        {
+            "bin": "./parachain/target/release/parachain-collator",
+            "id": "2000",
+            "balance": "1000000000000000000000",
+            "nodes": [
+                {
+                    "wsPort": 9977,
+                    "port": 30777,
+                    "name": "alice",
+                    "flags": ["--", "--execution=wasm"]
+                }
+            ]
+        }
+    ],
+    "hrmpChannels": [],
+    "types": {},
+    "finalization": false
+}

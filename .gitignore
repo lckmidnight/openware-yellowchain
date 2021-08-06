@@ -1,0 +1,4 @@
+/relaychain/bin/polkadot
+
+/*.log
+/rococo-local*.json
